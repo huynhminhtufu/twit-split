@@ -1,39 +1,55 @@
-# zalora
+## Zalora TwitSplit Assignment
 
-## Project setup
-```
-yarn install
-```
+## Stack
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+- Vue (I like React but choose Vue for faster develop)
+- Vue Router (no need switch router here, but it's fine)
+- Vuetify (quick & powerful UI create)
+- Jest (testing)
+- Docker (quick run)
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+# Why
 
-### Run your tests
-```
-yarn run test
-```
+- Because this project is small, I would like to use Vue to quick create the project structure and focus to code.
 
-### Lints and fixes files
+# Run
+
+## Docker
+
+Clone repo and switch to root dir context, build image:
+
 ```
-yarn run lint
+docker build -t twitsplit .
 ```
 
-### Run your end-to-end tests
+Run Docker container at port 3000:
+
 ```
-yarn run test:e2e
+docker run -d --name twitsplit -p 3000:80 twitsplit:latest
 ```
 
-### Run your unit tests
+## Node.js
+
+Install Node.js running environment with `yarn`:
+
 ```
-yarn run test:unit
+npm install yarn --global
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Serve project:
+
+```
+yarn serve
+```
+
+Build project:
+
+```
+yarn build
+```
+
+Run unit test:
+
+```
+yarn test:unit
+```
