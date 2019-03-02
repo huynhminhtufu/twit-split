@@ -10,6 +10,6 @@ test("split function", () => {
   expect(output instanceof Array).toBe(true);
   expect(output.length).toBeGreaterThanOrEqual(1);
   output.forEach(e => {
-    expect(e.length).toBeLessThan(50);
+    expect(e.length).toBeLessThan(len);
   });
 });
